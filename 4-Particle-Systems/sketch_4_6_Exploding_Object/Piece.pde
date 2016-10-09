@@ -1,27 +1,36 @@
 class Piece {
-  int side = 30;
+  static final int SIDE = 30;
   
   PVector location;
   PVector velocity;
-  float theta; 
+  float rotation = 0;
+  float theta = 0; 
   
   Piece(PVector l) {
     location = l;
+    velocity = new PVector();
   }
   
   void applyForce(PVector force) {
-    
+    velocity.add(force);
+  }
+  
+  void applyRotation(float radians) {
+    theta = radians; 
   }
   
   void update() {
+    location.add(velocity);    
+    rotation += theta;
   }
   
   void display() {
-    stroke(0);
+    pushMatrix();
+    translate(location.x, location.y);
+    rotate(rotation);
+    stroke(127);
     fill(127);
-    rect(location.x, location.y, side, side);
-  }
-  
-  void run() {
+    rect(0, 0, Piece.SIDE, Piece.SIDE);    
+    popMatrix();
   }
 }
