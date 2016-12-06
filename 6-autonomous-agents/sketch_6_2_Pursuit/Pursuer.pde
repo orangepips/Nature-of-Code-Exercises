@@ -5,7 +5,7 @@ class Pursuer extends Vehicle {
   Pursuer(float x, float y) {
     super(x, y);
     this.maxspeed = 5;
-    c = color(255, 0, 0); 
+    c = color(0, 0, 255); 
   }
   
   void move(Vehicle other) {

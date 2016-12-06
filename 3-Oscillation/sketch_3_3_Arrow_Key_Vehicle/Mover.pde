@@ -46,7 +46,7 @@ class Mover {
     rectMode(CENTER);
     translate(position.x, position.y);
     rotate(theta);
-    rect(0, 0, 30, 10);
+    rect(0, 0, 60, 20);
     rect(10, 0, 3, 3);
     popMatrix();
   }

@@ -1,7 +1,7 @@
 class Pursued extends Vehicle {
   Pursued(float x, float y) {
     super(x, y);
-    c = color(0, 255, 0);
+    c = color(255, 0, 0);
     this.maxspeed = 3;
     this.maxforce = 1; // allow it to turn faster than Pursuer  
   }
